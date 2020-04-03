@@ -156,7 +156,7 @@ footer{
     position: fixed;
     left: 0;
     bottom: 0;
-    max-width: 100%;
+    width: 100%;
     background-color: var(--light-grayish-blue);
     text-align: center;
 }
@@ -273,14 +273,7 @@ main{
         display: none;
     }
 
-    .btn {
-        font-size: 1em;
-    }
- 
     footer{
-        display: block;
-        position: relative;
-        margin-top: 50px;
-        font-size: 0.8em;
+        display: none;
     }
 }
