@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap');
+
+:root{
+    --very-dark-blue:  hsl(230, 29%, 20%);
+    --dark-grayish-blue: hsl(230, 11%, 40%);
+    --grey-blue: hsl(231, 7%, 65%);
+    --light-grayish-blue: hsl(207, 33%, 95%);
+    --red: hsl(0, 100%, 68%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--very-dark-blue);
+    background-color: #fff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+body::after{
+    height: 50vh;
+    width: 50vw;
+    background-color: var(--light-grayish-blue);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-bottom-left-radius: 50px;
+}
+
+h1,
+h3,
+button,
+nav a{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.hamburger{
+    display: none;
+}
+
+h1{
+    font-size: 4em;
+    margin: 0 ;
+    line-height: 1;
+}
+
+h3{
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+    color: var(--dark-grayish-blue);
+}
+
+h3 span{
+    background-color: var(--very-dark-blue);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    font-size: 1.2em;
+    color: var(--dark-grayish-blue);
+}
+
+.btn{
+    background-color: var(--red);
+    border: 0;
+    font-size: 1.2em;
+    border-radius:5px;
+    padding: 15px 35px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    border: 0 20px;
+}
+
+.container > div{
+    flex:0.7;
+}
+.container > div:first-child{
+    flex: 1.2;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+nav{
+    margin: 30px 0;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li{
+    margin-left: 40px;
+}
+
+ul li.unicorn::before{
+    content: '';
+    border-radius: 50%;
+    margin-left: 50px;
+    height: 6px;
+    width: 200%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50px, -50%);
+    background-color: var(--grey-blue);
+    opacity: 0.6;
+    position: relative;
+}
+
+ul li.unicorn{
+    margin-left: 40px 20px 20px;
+    position: relative;
+}
+
+ul li a{
+    color: var(--very-dark-blue);
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+ul li.unicorn a {
+    color: var(--grey-blue);
+    
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+}
+main{
+    display: flex;
+    align-self: center;
+    height: calc(100% - 160px);
+}
+
+.illustration{
+    transform: scale(2.2) translateX(18%);
+}
+
+@media screen and (max-width: 768px){
+
+    body{
+        font-size: 1em;
+    }
+
+    .mobile-reverse{
+        flex-direction: column-reverse;
+        margin-bottom: -40px;
+    }
+    .flex{
+        margin-top:50px;
+    }
+
+    .illustration{
+        transform: scale(1.4) translate(20%);
+        padding-top: 40px;
+        margin-bottom: 100px;
+        bottom: 0;
+    }
+
+    h1{
+        font-size: 4em;
+    }
+
+    ul{
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+        top: 100px;
+        left: 20px;
+        z-index: 100;
+        width: calc(100% - 40px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(120%);
+        transition: transform 0.4s ease;
+    }
+
+    .show-nav ul{
+        transform: translateX(0);
+    }
+
+
+    ul li{
+        margin-top: 30px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    ul li.unicorn {
+        margin: 40px 0px 20px;
+    }
+
+    ul li.unicorn::before{
+        content: '';
+        border-radius: 0;
+        height: 1px;
+        width: 75%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transform: translate(0, -20px);
+        background-color: var(--grey-blue);
+        opacity: 0.6;
+    }
+
+    ul li a {
+        font-size: 1.5em;
+    }
+
+    .hamburger{
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        display: block;
+    }
+
+    .hamburger:focus{
+        outline: none;
+    }
+
+    .icon-close{
+        display: none;
+    }
+
+    .show-nav .icon-close{
+        display: block;
+    }
+
+    .show-nav .icon-hamburger{
+        display: none;
+    }
+ 
+    footer{
+        display: none;
+    }
+}
