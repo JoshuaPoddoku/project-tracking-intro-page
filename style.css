@@ -251,6 +251,10 @@ main{
         display: block;
     }
 
+    .hamburger:hover{
+        transform: scale(1.2);
+    }
+
     .hamburger:focus{
         outline: none;
     }
