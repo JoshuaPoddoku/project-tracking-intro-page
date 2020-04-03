@@ -178,6 +178,7 @@ main{
 
     body{
         font-size: 1em;
+        overflow-x: hidden;
     }
 
     .mobile-reverse{
@@ -257,6 +258,7 @@ main{
 
     .hamburger:focus{
         outline: none;
+        background-color: transparent;
     }
 
     .icon-close{
@@ -270,8 +272,15 @@ main{
     .show-nav .icon-hamburger{
         display: none;
     }
+
+    .btn {
+        font-size: 1em;
+    }
  
     footer{
-        display: none;
+        display: block;
+        position: relative;
+        margin-top: 50px;
+        font-size: 0.8em;
     }
 }
