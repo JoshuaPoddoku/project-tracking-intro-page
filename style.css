@@ -273,6 +273,10 @@ main{
         display: none;
     }
 
+    .btn{
+        font-size: 0.9em;
+    }
+
     footer{
         display: none;
     }
